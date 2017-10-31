@@ -1,0 +1,23 @@
+        Random rn = new Random();
+        int Answer = rn.nextInt(100) + 1;
+        int guess = 0;
+        int Tries = 9;
+        
+        while (guess != Answer && Tries > -1) {
+        System.out.println("Enter a number between 1 and 100.");
+        guess = sc.nextInt();
+        if (guess == Answer) {
+            System.out.println("Well done! You win!");
+        } if (guess < Answer) {
+              System.out.println("Higher. Tries left: " + Tries);
+              Tries = Tries - 1;
+              if (Tries <= 0) {
+                System.out.println("You lose.");
+              }
+          } if (guess > Answer) {
+              System.out.println("Lower. Tries left: " + Tries);
+              Tries = Tries - 1;
+              if (Tries <= 0) {
+                System.out.println("You lose.");
+              }
+          }
