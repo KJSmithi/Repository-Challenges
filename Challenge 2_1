@@ -1,0 +1,14 @@
+Heart Rate = ((Max HR - resting HR)x %intesity) + resting HR
+        
+System.out.println("Enter Your age.");
+int age = sc.nextInt(); 
+System.out.println("Enter your resting heart rate.");
+int RestingHR = sc.nextInt();
+int MaxHR = 220 - age;
+double HeartRate;
+
+for (double n = 0.55; n <= 1; n = n + 0.05) {
+    HeartRate = ((MaxHR - RestingHR)* n) + RestingHR;
+    System.out.println("For effort: " + (n * 100));
+    System.out.println("Heart rate is: " + HeartRate);
+    }
